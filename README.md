@@ -1,44 +1,65 @@
-# Typing Speed Tester
+# ⌨️ Typing Speed Tester
 
-This project is a typing speed tester application built using Python and Tkinter. It allows users to test their typing speed and accuracy through a simple and interactive graphical user interface.
+A small Python/Tkinter app to measure typing speed (WPM) and accuracy with selectable text sources.
 
-## Features
+## ✨ Features
 
-- User-friendly GUI for typing tests
-- Displays random text for users to type
-- Calculates typing speed in words per minute (WPM)
-- Tracks accuracy and provides feedback
-- Simple and clean design
+- Selectable text source: "literature" (real quotes via APIs) or "random" (local gibberish).
+- 2-minute timed typing test (default).
+- Dynamic text extension while typing when you near the end of the provided text.
+- Gross WPM, Net WPM (correct words), accuracy percentage, total typed and correct word counts are shown.
+- Simple, styled Tkinter UI with a source dropdown and start/reset controls.
+- Offline-safe: when external quote APIs fail, a local random-word fallback is used.
 
-## Installation
+## 🚀 Installation
 
-To run this application, you need to have Python installed on your machine. You can download Python from [python.org](https://www.python.org/downloads/).
+Requires Python 3.7+.
 
-### Dependencies
+Install dependencies:
 
-Install the required dependencies using pip. You can do this by running the following command in your terminal:
-
-```
+```bash
 pip install -r requirements.txt
 ```
 
-## Running the Application
+Notes:
 
-To start the typing speed tester application, navigate to the project directory and run the following command:
+- Tkinter is part of the standard library for most Python distributions (on some linux systems you may need to install a separate tk package).
+- The app optionally uses the internet to fetch quotes; if requests to APIs fail the app will fall back to locally generated random words.
 
-```
+## ▶️ Running the App
+
+From the project root:
+
+```bash
 python main.py
 ```
 
-## Usage
+The main window provides:
 
-1. Once the application is running, you will see a text displayed on the screen.
-2. Type the text as quickly and accurately as possible.
-3. After completing the typing, the application will display your typing speed and accuracy.
+- "Text Source" dropdown to choose between "literature" (default) and "random".
+- "Start" to begin the 2-minute test.
+- "Reset" to stop and refresh the test text.
+- Results card showing Gross WPM, Net WPM, Accuracy, Correct words and Total typed.
+
+## 🖼️ App Screens
+
+Screenshot 1 — Main view (typing area + controls):
+<img src="./screenshots/screen1.png" alt="App Screen 1" style="width:650px; height: 450px"/>   
+
+Screenshot 2 — Results card after finishing:
+<img src="./screenshots/screen2.png" alt="App Screen 2" style="width:750px; height: 450px"/>
+
+
+## 🧭 Behavior Details / Tips
+
+- "literature" attempts to fetch quotes from ZenQuotes then DummyJSON; if both fail the app uses a local random-word generator.
+- While typing, if you approach the end of the displayed text the app auto-appends additional text so you can keep typing without interruption.
+- Accuracy is calculated as (correct words / total typed words) * 100.
+- Gross WPM is based on total typed words; Net WPM uses only correct words.
 
 ## Contributing
 
-If you would like to contribute to this project, feel free to fork the repository and submit a pull request. Any contributions are welcome!
+Contributions welcome. Fork, make changes, and submit a PR. Please keep UI/text source behavior consistent with existing code.
 
 ## License
 
