@@ -43,11 +43,11 @@ The main window provides:
 
 ## 🖼️ App Screens
 
-Screenshot 1 — Main view (typing area + controls):
-<img src="./screenshots/screen1.png" alt="App Screen 1" style="width:650px; height: 450px"/>   
+#### Screenshot 1 — Main view (typing area + controls):
+<img src="./screenshots/Screen1.PNG" alt="App Screen 1" style="width:650px; height: 450px"/>   
 
-Screenshot 2 — Results card after finishing:
-<img src="./screenshots/screen2.png" alt="App Screen 2" style="width:750px; height: 450px"/>
+#### Screenshot 2 — Results card after finishing:
+<img src="./screenshots/Screen2.PNG" alt="App Screen 2" style="width:750px; height: 450px"/>
 
 
 ## 🧭 Behavior Details / Tips
